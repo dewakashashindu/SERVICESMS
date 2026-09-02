@@ -1,0 +1,42 @@
+================================================
+ MM RESTAURANT SMS - ALUTH FILES (FIXES)
+================================================
+
+Meka karanaya:
+
+1) Me zip eka extract karala,
+   E:\SmsServiceApp\MMRestaurantSMS  folder ekata
+   COPY karanna (overwrite karanna "Yes").
+
+   Files list eka:
+   - SMSService.Core\SmsApiService.cs          (text.lk type fix - PATCHED)
+   - SMSService.Core\DatabaseService.cs        (SQL2008 + NULL Sent fix - PATCHED)
+   - SMSService.Worker\SmsWorker.cs            (worker improvements - PATCHED)
+   - SMSService.Worker\SMSService.Worker.csproj (SNI/TdsParser fix)
+   - SMSService.Installer\Form1.cs             (uninstall hardening)
+   - SMSService.Installer\SMSService.Installer.csproj (SNI fix)
+   - build-client-package.ps1                  (CLIENT EXE build karana script eka)
+   - uninstall.ps1                             (standalone uninstaller)
+
+   NOTE: .cs files 3 + worker csproj oya machine eke AITHI dan
+   (install-service.ps1 eken patch wela). Ewath copy karanna -
+   hama file ekamai aluth version.
+
+2) Repo folder eken (Admin ONA NA):
+   powershell -ExecutionPolicy Bypass -File build-client-package.ps1
+
+3) OUTPUT:
+   E:\SmsServiceApp\MMRestaurantSMS\CLIENT_PACKAGE\
+      - SMSService.Installer.exe  <- CLIENT LAATA MEKA
+      - HOW-TO-INSTALL.txt
+      - uninstall.ps1
+
+4) CLIENT_PACKAGE folder eka ZIP karala client laata yawanaya.
+
+5) GitHub eke save karanna:
+   cd E:\SmsServiceApp\MMRestaurantSMS
+   git add -A
+   git commit -m "Fixes: text.lk type field, SQL2008, NULL Sent, SNI single-file, uninstall hardening"
+   git push
+
+================================================

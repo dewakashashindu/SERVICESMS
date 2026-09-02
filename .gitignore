@@ -1,0 +1,13 @@
+publish*/
+bin/
+obj/
+
+CLIENT_PACKAGE/
+SMSService.Installer/
+*.exe
+*.zip
+
+CLIENT_PACKAGE/
+SMSService.Installer/
+*.exe
+*.zip

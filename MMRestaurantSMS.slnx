@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="PasswordHelper/PasswordHelper.csproj" />
+  <Project Path="SMSService.Core/SMSService.Core.csproj" />
+  <Project Path="SMSService.Installer/SMSService.Installer.csproj" />
+  <Project Path="SMSService.Worker/SMSService.Worker.csproj" />
+</Solution>
